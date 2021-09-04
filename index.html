@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" href="./img/logo.svg">
+</head>
+<body>
+    <h1 class="body-heading"> splitter</h1>
+
+    <section class="card">
+        <div class="inputs">
+            <p class="bill-title ">bill</p>
+            <span class='warning-bill hidden'>! This feild cannot be zero</span>
+            <div class="bill-input">
+                <img src="./img/icon-dollar.svg" alt="dollar"  class="bill-input-dollar">
+                <input type="number" placeholder="0" min="0" class="bill-input-entry">
+            </div>
+
+            <p class="tip-title">select tip %</p>
+            <div class="tip-btns">
+                <button class="btn active">5%</button>
+                <button class="btn">10%</button>
+                <button class="btn">15%</button>
+                <button class="btn">25%</button>
+                <button class="btn">50%</button>
+                <input type="number" class="tip-custom" placeholder="Custom" min="0">
+            </div>
+
+            <p class="people-title">Number of People</p>
+            <p class='warning-people hidden'>! This feild cannot be zero</p>
+            <div class="people-input">
+                <img src="./img/icon-person.svg" alt="" class="people-logo">
+                <input type="number" class="people-input-number"  min="0" placeholder="0">
+            </div>
+            
+
+
+        </div>
+
+        <div class="result">
+            <div class="tip-amount">
+                <h3 class="tip-amount-title">tip amount <span class="result-span">/ person</span> </h3>
+                <h1 class="tip-amount-value value">$4.27</h1>
+            </div>
+            <div class="tip-total">
+                <h3 class="tip-total-title">total <span class="result-span">/ person</span> </h3>
+                <h1 class="tip-total-value value">$32.7</h1>
+            </div>
+            
+            <button class="result-reset">Reset</button>
+
+        </div>
+
+
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>

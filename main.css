@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+*{
+    padding: 0;
+    margin:0;
+}
+:root{
+    --tip-input-colors: rgb(141,155,153);
+    --btn-color:rgb(0,71,74);
+    --result-value:rgb(0,196,172);
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Mono', monospace;
+    background: rgb(194,228,231);
+    position: relative;
+    min-height: 40vh;
+    
+}
+.body-heading{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    position: absolute;
+    top:-30%;
+    left:40%;
+
+}
+.card{
+    background: rgb(255,255,255);
+    display: flex;
+    justify-content: space-between;
+    width:80%;
+    height: auto;
+    margin:15% auto;
+    box-sizing: border-box;
+}
+.inputs{
+    padding:5% 5%;
+    width:50%;
+}
+.bill-title{
+    text-transform: capitalize;
+    color: var(--tip-input-colors);
+}
+.bill-input{
+    margin:5px 0;
+    display: flex;
+    background: rgb(242,248,250);
+    justify-content: space-between;
+    align-items: center;
+    width:300px;
+    height:25px;
+    border-radius: 7px;
+    color: var(--tip-input-colors);
+    font-size: 2rem;
+}
+
+.bill-input-dollar{
+    margin-left: 10px;
+}
+.bill-input-entry{
+    
+    border: none;
+    background: transparent;
+    text-align: right;
+}
+.tip-title{
+    margin:5%  0 0 0;
+    color:var(--tip-input-colors)
+}
+.tip-btns{
+
+    width:300px;
+    
+
+   
+}
+.btn{
+    background: var(--btn-color);
+    border:none;
+    width:80px;
+    text-align: center;
+    font-size: 1.2rem;
+    
+    border-radius: 5px;
+    color: white;
+    padding:5px 10px;
+    flex:1 0 calc(33.33% - 1rem);
+    box-sizing:border-box;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--result-value);
+}
+.tip-custom{
+    background:rgb(242,248,250);;
+    border:none;
+    box-sizing: border-box;
+    width:80px;
+    text-align: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-top:10px;
+    border-radius: 5px;
+    color: white;
+    padding:10px 5px;
+    flex:1 0 calc(33.33% - 1rem);
+    color:black;
+}
+.people-title{
+    margin:5%  0 0 0;
+    color:var(--tip-input-colors)
+}
+.people-input{
+    margin:5px 0;
+    display: flex;
+    background: rgb(242,248,250);
+    justify-content: space-between;
+    align-items: center;
+    width:300px;
+    height:25px;
+    border-radius: 7px;
+}
+.people-logo{
+    margin-left: 10px;
+}
+.people-input-number{
+    
+    border: none;
+    background: transparent;
+    text-align: right;
+}
+.result{
+    margin:5% 5%;
+    background: var(--btn-color);
+    width:50%;
+    
+    padding:2%;
+    border-radius: 12px;
+    
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.result-span{
+    display: block;
+    color:var(--tip-input-colors) ;
+    font-size: 0.8rem;
+}
+.tip-amount{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size:1.1rem;
+    text-transform: capitalize;
+
+}
+.value{
+    font-size: 2rem;
+    color:var(--result-value)
+}
+.tip-total{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size:1.1rem;
+    text-transform: capitalize;
+    margin-top:-30px;
+}
+.result-reset{
+    background-color:var(--result-value);
+    color: black;
+    border: none;
+    padding:2% 5%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.result-reset:hover{
+    background: rgba(0,0,0,0.3);
+    color:white;
+}
+.active{
+    background: var(--result-value);
+}
+.warning-bill,.warning-people{
+    display: inline;
+    color: orange;
+    font-size: 0.5rem;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width:1300px) {
+    .card{
+        width:50%;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .card{
+        flex-direction: column;
+        width: 60vw;
+        height: auto;
+
+    }
+    .result{
+        width:85%;
+        height:22vh;
+    }
+    .bill-input,.people-input{
+        width:50vw;
+    }
+    .body-heading{
+        top:-10%;
+        left:30%;
+        
+    }
+}
